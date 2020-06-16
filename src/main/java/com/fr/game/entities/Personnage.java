@@ -25,8 +25,18 @@ public abstract class Personnage extends BaseEntite {
 	private Integer niveau;
 
 	
+	public Personnage() {
+		
+	}
 	
-	
+	public Personnage(Classe classe, String pseudo, Statistique baseStatistiques, String imageURL, Integer niveau) {
+		this.baseStatistiques = baseStatistiques;
+		this.pseudo = pseudo;
+		this.classe = classe;
+		this.imageURL = imageURL;
+		this.niveau = niveau;
+	}
+
 	public String getPseudo() {
 		return pseudo;
 	}

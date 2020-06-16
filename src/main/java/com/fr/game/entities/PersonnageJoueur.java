@@ -7,10 +7,13 @@ import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
+import com.fr.game.entities.utils.Classe;
 import com.fr.game.entities.utils.Statistique;
 
 @Entity
 public class PersonnageJoueur extends Personnage {
+
+
 
 	private Double experience;
 	@OneToMany
@@ -22,12 +25,12 @@ public class PersonnageJoueur extends Personnage {
 	private Salle salleActuel; 
 
 	public PersonnageJoueur() {
-
+		
 	}
 
-	public PersonnageJoueur(Double experience, List<Equipement> equipements, List<Consumable> consumables,
+	public PersonnageJoueur( Classe classe, String imageURL, Statistique baseStatistiques, Integer niveau, Double experience, List<Equipement> equipements, List<Consumable> consumables,
 			Salle salleActuel) {
-		super();
+		super(classe, imageURL, baseStatistiques, imageURL, niveau);
 		this.experience = experience;
 		this.equipements = equipements;
 		this.consumables = consumables;
